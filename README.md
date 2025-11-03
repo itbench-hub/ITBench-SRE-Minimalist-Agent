@@ -81,8 +81,8 @@ customizations and configurations will be explained below.
 ### Simple Agent Mode
 <img src="/images/agentflow.png" alt="Alt Text" width="500">
 <img src="/images/agent.png" alt="Alt Text" width="500">
-<img src="/images/ollama-server.png" alt="Alt Text" width="500">
 <img src="/images/start-agent.png" alt="Alt Text" width="500">
+<img src="/images/ollama-server.png" alt="Alt Text" width="500">
 <img src="/images/qwen3.png" alt="Alt Text" width="500">
 <img src="/images/mcp.png" alt="Alt Text" width="500">
 <img src="/images/mcp-config.png" alt="Alt Text" width="500">
