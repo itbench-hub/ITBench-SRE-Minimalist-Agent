@@ -141,8 +141,8 @@ customizations and configurations will be explained below.
 
 - #### You can close the `Agent` customization options by clicking anywhere outside the customization box. At the upper-right corner, click the chat icon to open the chat interface as shown below.
 
-  <img src="/images/chat1.png" alt="chatbutton" width="100">
-  <img src="/images/chat2.png" alt="chatinterface" width="100">
+  <img src="/images/chat1.png" alt="chatbutton" width="200">
+  <img src="/images/chat2.png" alt="chatinterface" width="200">
 
   **_NOTE:_** One can skip the manual creation of this simple SRE agent by loading the json file called `simple-sre-agent.json` in the **agents** directory. 
 Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner. 
