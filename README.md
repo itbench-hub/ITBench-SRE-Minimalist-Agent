@@ -79,8 +79,8 @@ customization but it can be a good choice to try and explore a running applicati
 Chatflow focuses on a single agent doing tasks using different sources of information while Agentflow covers advanced features
 for multi-steps reasoning, multi-agents interaction, decision-making, planning, orchestration, and context engineering.
 Since Agentflow is a superset of Chatflow and provides the most customization among the three,
-its framework will be used in the implementation of `Simple Agent` and `Supervisor-Workers` Agents and their
-customizations and configurations will be explained below.
+its framework will be used in the implementation of a `Simple SRE Agent` and its
+customizations and configurations are listed in detail below.
 
 ### Simple Agent Mode
 
@@ -90,15 +90,15 @@ customizations and configurations will be explained below.
 
 <img src="/images/agentflow.png" alt="agentflow" width="500">
 
-- #### Click the plus button to open the available tools. Drag-and-drop the `Agent` component.
+- #### Click the plus button to open the available nodes. Drag-and-drop the `Agent` node.
 
 <img src="/images/agent.png" alt="agent" width="500">
 
-- #### Connect the `start` component to the `Agent` component
+- #### Connect the `start` node to the `Agent` node.
 
 <img src="/images/start-agent.png" alt="start" width="500">
 
-- #### Double-click the `Agent` component to open the custimization options. In the `Model` section, search for ChatOllama.
+- #### Double-click the `Agent` node to open the custimization options. In the `Model` section, search for ChatOllama.
 
 <img src="/images/ollama-server.png" alt="ollama" width="500">
 
