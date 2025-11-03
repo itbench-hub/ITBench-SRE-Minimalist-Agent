@@ -1,4 +1,4 @@
-# SRE-Agent Playground
+# Minimalist SRE-Agent Playground
 
 ## Local Ollama Models for Agents
 
