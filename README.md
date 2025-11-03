@@ -79,7 +79,7 @@ its framework will be used in the implementation of `Simple Agent` and `Supervis
 customizations and configurations will be explained below.
 
 ### Simple Agent Mode
-![agentflow](./images/agentflow.png")
+![agentflow](./images/agentflow.png)
 
 
 ### Supervisor-Workers Mode
