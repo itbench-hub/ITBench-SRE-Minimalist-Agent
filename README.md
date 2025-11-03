@@ -79,7 +79,16 @@ its framework will be used in the implementation of `Simple Agent` and `Supervis
 customizations and configurations will be explained below.
 
 ### Simple Agent Mode
-![agentflow](./images/agentflow.png)
+![](./images/agentflow.png)
+![](./images/agent.png)
+![](./images/ollama-server.png)
+![](./images/start-agent.png)
+![](./images/qwen3.png)
+![](./images/mcp.png)
+![](./images/mcp-config.png)
+![](./images/refresh-choose-tools.png)
+![](./images/tools-listing.png)
+![](./images/add-system-prompt.png)
 
 
 ### Supervisor-Workers Mode
