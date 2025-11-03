@@ -1,5 +1,21 @@
 # SRE-Agent Playground
 
-### Simple Agent Mode
+## Local Ollama Models for Agents
 
-### Supervisor Mode
+- ### Installation
+
+- ### Configuration
+
+## Flowise Framework for AI Applications
+
+- ### Installation
+
+- ### Configuration
+
+## Simple Agent Mode
+
+- ### Configuration
+
+## Supervisor-Workers Mode
+
+- ### Configuration
