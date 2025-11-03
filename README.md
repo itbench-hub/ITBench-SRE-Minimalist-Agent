@@ -88,27 +88,27 @@ customizations and configurations will be explained below.
 - #### Open flowise in a browser at `http://localhost:3000`
 - #### Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner.
 
-<img src="/images/agentflow.png" alt="Alt Text" width="500">
+<img src="/images/agentflow.png" alt="agentflow" width="500">
 
 - #### Click the plus button to open the available tools. Drag-and-drop the `Agent` component.
 
-<img src="/images/agent.png" alt="Alt Text" width="500">
+<img src="/images/agent.png" alt="agent" width="500">
 
 - #### Connect the `start` component to the `Agent` component
 
-<img src="/images/start-agent.png" alt="Alt Text" width="500">
+<img src="/images/start-agent.png" alt="start" width="500">
 
 - #### Double-click the `Agent` component to open the custimization options. In the `Model` section, search for ChatOllama.
 
-<img src="/images/ollama-server.png" alt="Alt Text" width="500">
+<img src="/images/ollama-server.png" alt="ollama" width="500">
 
 - #### Click the `ChatOllama Parameters` drop-down menu. The Base URL is already correct. Add `qwen3:8b` in the `Model Name`. Leave the other options in their default values.
 
-<img src="/images/qwen3.png" alt="Alt Text" width="500">
+<img src="/images/qwen3.png" alt="qwen3" width="500">
 
 - #### Goto the `Tools` section. Search for the keyword `MCP` and choose `Custom MCP`.
 
-<img src="/images/mcp.png" alt="Alt Text" width="500">
+<img src="/images/mcp.png" alt="mcp" width="500">
 
 - #### Click the `Custom MCP Parameters` menu. Copy and paste the following json configuration:
 
@@ -125,19 +125,24 @@ customizations and configurations will be explained below.
   }
   ```
 
-  <img src="/images/mcp-config.png" alt="Alt Text" width="500">
+  <img src="/images/mcp-config.png" alt="mcpconfig" width="500">
 
 - #### Click the refresh tools and select the actions from the drop-down menu.
 
-<img src="/images/refresh-choose-tools.png" alt="Alt Text" width="500">
+<img src="/images/refresh-choose-tools.png" alt="refresh" width="500">
 
 - #### As you choose the actions in the list, the tool list will be updated.
 
-<img src="/images/tools-listing.png" alt="Alt Text" width="500">
+<img src="/images/tools-listing.png" alt="actions" width="500">
 
 - #### Finally, look for the `Messages` section and add a system prompt.
 
-  <img src="/images/add-system-prompt.png" alt="Alt Text" width="500">
+  <img src="/images/add-system-prompt.png" alt="prompt" width="500">
+
+- #### You can close the `Agent` customization options by clicking anywhere outside the customization box. At the upper-right corner, click the chat icon to open the chat interface as shown below.
+
+  <img src="/images/chat1.png" alt="chatbutton" width="500">
+  <img src="/images/chat2.png" alt="chatinterface" width="500">
 
   **_NOTE:_** One can skip the manual creation of this simple SRE agent by loading the json file called `simple-sre-agent.json` in the **agents** directory. 
 Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner. 
