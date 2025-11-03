@@ -79,17 +79,16 @@ its framework will be used in the implementation of `Simple Agent` and `Supervis
 customizations and configurations will be explained below.
 
 ### Simple Agent Mode
-![](./images/agentflow.png)
-![](./images/agent.png)
-![](./images/ollama-server.png)
-![](./images/start-agent.png)
-![](./images/qwen3.png)
-![](./images/mcp.png)
-![](./images/mcp-config.png)
-![](./images/refresh-choose-tools.png)
-![](./images/tools-listing.png)
-![](./images/add-system-prompt.png)
+<img src="/images/agentflow.png" alt="Alt Text" width="500">
+<img src="/images/agent.png" alt="Alt Text" width="500">
+<img src="/images/ollama-server.png" alt="Alt Text" width="500">
+<img src="/images/start-agent.png" alt="Alt Text" width="500">
+<img src="/images/qwen3.png" alt="Alt Text" width="500">
+<img src="/images/mcp.png" alt="Alt Text" width="500">
+<img src="/images/mcp-config.png" alt="Alt Text" width="500">
+<img src="/images/refresh-choose-tools.png" alt="Alt Text" width="500">
+<img src="/images/tools-listing.png" alt="Alt Text" width="500">
+<img src="/images/add-system-prompt.png" alt="Alt Text" width="500">
 
 
 ### Supervisor-Workers Mode
-<img src="/images/add-system-prompt.png" alt="Alt Text" width="500">
