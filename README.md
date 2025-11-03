@@ -92,4 +92,4 @@ customizations and configurations will be explained below.
 
 
 ### Supervisor-Workers Mode
-
+<img src="/images/add-system-prompt.png" alt="Alt Text" width="300" height="200">
