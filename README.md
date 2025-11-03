@@ -1,10 +1,14 @@
-# Minimalist SRE-Agent Playground with Kubernetes MCP tool
+# Minimalist SRE-Agent Playground with MCP Tools
 
 ## Prerequisites
 
 To use the SRE-Agent playground, you need the following installed or running in your OS:
 
 - access to a Kubernetes cluster with `KUBECONFIG` environment variable pointing to the cluster's kubeconfig file.
+  ```bash
+  # add in your .bashrc/.bash_profile or .zshrc/.zshenv
+  export KUBECONFIG=/path/to/kubeconfig_file
+  ```
 - `uv` command
   ```bash
     # For Linux and MacOS
@@ -64,15 +68,19 @@ To use the SRE-Agent playground, you need the following installed or running in 
   ```
 
 ## Flowise Framework for AI Applications
+There are three major options to build AI-powered applications in `Flowise`, namely: `Assistants`, `Chatflows`, and `Agentflows`.
+An AI Assistant provides the simplest way to build AI applications using preconfigured structure for rapid prototyping. It lacks 
+customization but it can be a good choice to try and explore a running application in the flowise framework. 
 
-- ### Installation
+Chatflow focuses on a single agent doing tasks using different sources of information while Agentflow covers advanced features 
+for multi-steps reasoning, multi-agents interaction, decision-making, planning, orchestration, and context engineering. 
+Since Agentflow is a superset of Chatflow and provides the most customization among the three, 
+its framework will be used in the implementation of `Simple Agent` and `Supervisor-Workers` Agents and their 
+customizations and configurations will be explained below.
 
-- ### Configuration
+### Simple Agent Mode
+![agentflow](./images/agentflow.png")
 
-## Simple Agent Mode
 
-- ### Configuration
+### Supervisor-Workers Mode
 
-## Supervisor-Workers Mode
-
-- ### Configuration
