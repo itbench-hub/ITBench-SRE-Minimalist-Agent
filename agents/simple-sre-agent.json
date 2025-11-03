@@ -4,8 +4,8 @@
       "id": "startAgentflow_0",
       "type": "agentFlow",
       "position": {
-        "x": -254.47597961507242,
-        "y": 2.9508918919291176
+        "x": -174.5,
+        "y": 99.5
       },
       "data": {
         "id": "startAgentflow_0",
@@ -15,9 +15,7 @@
         "type": "Start",
         "color": "#7EE787",
         "hideInput": true,
-        "baseClasses": [
-          "Start"
-        ],
+        "baseClasses": ["Start"],
         "category": "Agent Flows",
         "description": "Starting point of the agentflow",
         "inputParams": [
@@ -195,27 +193,25 @@
       "height": 66,
       "selected": false,
       "positionAbsolute": {
-        "x": -254.47597961507242,
-        "y": 2.9508918919291176
+        "x": -174.5,
+        "y": 99.5
       },
       "dragging": false
     },
     {
       "id": "agentAgentflow_0",
       "position": {
-        "x": -55.346325698461925,
-        "y": -2.383988112787023
+        "x": 2.182049961990515,
+        "y": 81.62262672451882
       },
       "data": {
         "id": "agentAgentflow_0",
-        "label": "K8s Agent",
+        "label": "Kubernetes Agent",
         "version": 2,
         "name": "agentAgentflow",
         "type": "Agent",
         "color": "#4DD0E1",
-        "baseClasses": [
-          "Agent"
-        ],
+        "baseClasses": ["Agent"],
         "category": "Agent Flows",
         "description": "Dynamically choose and utilize tools during runtime, enabling multi-step reasoning",
         "inputParams": [
@@ -529,10 +525,20 @@
           "agentMessages": [
             {
               "role": "system",
-              "content": "<p>You are an AI assistant that has access to Kubernetes cluster using MCP tool. Use the tool to query the cluster for any questions about the Kubernetes cluster. Just reply what is being asked and nothing else.</p>"
+              "content": "<p>You are a site reliability engineering agent. Your role is to monitor the kubernetes cluster, check its status, troubleshoot, provide insights of its operations, and identify issues. You should respond to the user request and using the tools you have and nothing else. Avoid guessing the results if the tools you used fails. Answer as clear as possible using tables, bullets, and markdown.</p>"
             }
           ],
-          "agentTools": [],
+          "agentTools": [
+            {
+              "agentSelectedTool": "customMCP",
+              "agentSelectedToolRequiresHumanInput": "",
+              "agentSelectedToolConfig": {
+                "mcpServerConfig": "{\n    \"command\": \"uvx\",\n    \"args\": [\n        \"--from\", \"git+https://github.com/mdwoicke/kuber-mcp-server.git\", \"kubectl-mcp\"\n    ],\n    \"env\": {\n        \"KUBECONFIG\": \"/path/to/.kube/config\"\n    }\n}",
+                "mcpActions": "[\"create_deployment\",\"delete_resource\",\"get_api_resources\",\"get_cluster_roles\",\"get_configmaps\",\"get_current_context\",\"get_deployments\",\"get_events\",\"get_logs\",\"get_namespaces\",\"get_nodes\",\"get_pod_events\",\"get_pods\",\"get_rbac_roles\",\"get_resource_usage\",\"get_secrets\",\"get_services\",\"health_check\",\"install_helm_chart\",\"kubectl_explain\",\"port_forward\",\"scale_deployment\",\"switch_context\",\"uninstall_helm_chart\",\"upgrade_helm_chart\",\"check_pod_health\"]",
+                "agentSelectedTool": "customMCP"
+              }
+            }
+          ],
           "agentKnowledgeDocumentStores": "",
           "agentKnowledgeVSEmbeddings": "",
           "agentEnableMemory": true,
@@ -543,7 +549,7 @@
           "agentModelConfig": {
             "cache": "",
             "baseUrl": "http://localhost:11434",
-            "modelName": "qwen3:14b",
+            "modelName": "qwen3:8b",
             "temperature": 0.9,
             "allowImageUploads": "",
             "streaming": true,
@@ -575,12 +581,12 @@
         "selected": false
       },
       "type": "agentFlow",
-      "width": 170,
-      "height": 72,
+      "width": 189,
+      "height": 100,
       "selected": false,
       "positionAbsolute": {
-        "x": -55.346325698461925,
-        "y": -2.383988112787023
+        "x": 2.182049961990515,
+        "y": 81.62262672451882
       },
       "dragging": false
     }
