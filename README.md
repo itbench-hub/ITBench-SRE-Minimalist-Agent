@@ -139,7 +139,7 @@ customizations and configurations will be explained below.
 
   <img src="/images/add-system-prompt.png" alt="prompt" width="500">
 
-- #### You can close the `Agent` customization options by clicking anywhere outside the customization box. At the upper-right corner, click the chat icon to open the chat interface as shown below.
+- #### You can close the `Agent` customization options by clicking anywhere outside the customization box. At the upper-right corner, click the chat icon to open the chat interface as shown below. Type your query in the designated chatbox.
 
   <img src="/images/chat1.png" alt="chatbutton" width="150">
   <img src="/images/chat2.png" alt="chatinterface" width="200">
