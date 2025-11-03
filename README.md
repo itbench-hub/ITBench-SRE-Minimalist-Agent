@@ -87,19 +87,20 @@ customizations and configurations will be explained below.
 - #### Click the plus button to open the available tools. Drag-and-drop the `Agent` component.
 <img src="/images/agent.png" alt="Alt Text" width="500">
 
-- #### connect the `start` component to `agent` component 
+- #### Connect the `start` component to the `Agent` component 
 <img src="/images/start-agent.png" alt="Alt Text" width="500">
 
-- #### double-click the `agent` component to customize the agent. In the `Model` section, search for ChatOllama.
+- #### Double-click the `Agent` component to open the custimization options. In the `Model` section, search for ChatOllama.
 <img src="/images/ollama-server.png" alt="Alt Text" width="500">
 
-- #### click the `ChatOllama Parameters` drop-down item. The Base URL is already correct and add `qwen3:8b` in the Model Name. Leave the other options in their default state.
+- #### Click the `ChatOllama Parameters` drop-down menu. The Base URL is already correct. Add `qwen3:8b` in the `Model Name`. 
+Leave the other options in their default values.
 <img src="/images/qwen3.png" alt="Alt Text" width="500">
 
-- #### goto the section to `Tools`. Search for the keyword `MCP` and choose `Custom MCP`.
+- #### Goto the `Tools` section. Search for the keyword `MCP` and choose `Custom MCP`.
 <img src="/images/mcp.png" alt="Alt Text" width="500">
 
-- #### click the `Custom MCP Parameters` and copy and paste the following json configuration below:
+- #### Click the `Custom MCP Parameters` menu. Copy and paste the following json configuration:
   ```
   {
     "command": "uvx",
