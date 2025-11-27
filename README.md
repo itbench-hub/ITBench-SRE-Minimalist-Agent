@@ -84,33 +84,33 @@ customizations and configurations are listed in detail below.
 
 ### Simple Agent Mode
 
-- #### Start flowise if it is not running: `npx flowise start`
-- #### Open flowise in a browser at `http://localhost:3000`
-- #### Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner.
+- Start flowise if it is not running: `npx flowise start`
+- Open flowise in a browser at `http://localhost:3000`
+- Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner.
 
 <img src="/images/agentflow.png" alt="agentflow" width="500">
 
-- #### Click the plus button to open the available nodes. Drag-and-drop the `Agent` node.
+- Click the plus button to open the available nodes. Drag-and-drop the `Agent` node.
 
 <img src="/images/agent.png" alt="agent" width="500">
 
-- #### Connect the `start` node to the `Agent` node.
+- Connect the `start` node to the `Agent` node.
 
 <img src="/images/start-agent.png" alt="start" width="500">
 
-- #### Double-click the `Agent` node to open the custimization options. In the `Model` section, search for ChatOllama.
+- Double-click the `Agent` node to open the custimization options. In the `Model` section, search for ChatOllama.
 
 <img src="/images/ollama-server.png" alt="ollama" width="500">
 
-- #### Click the `ChatOllama Parameters` drop-down menu. The Base URL is already correct. Add `qwen3:8b` in the `Model Name`. Leave the other options in their default values.
+- Click the `ChatOllama Parameters` drop-down menu. The Base URL is already correct. Add `qwen3:8b` in the `Model Name`. Leave the other options in their default values.
 
 <img src="/images/qwen3.png" alt="qwen3" width="500">
 
-- #### Goto the `Tools` section. Search for the keyword `MCP` and choose `Custom MCP`.
+- Goto the `Tools` section. Search for the keyword `MCP` and choose `Custom MCP`.
 
 <img src="/images/mcp.png" alt="mcp" width="500">
 
-- #### Click the `Custom MCP Parameters` menu. Copy and paste the following json configuration:
+- Click the `Custom MCP Parameters` menu. Copy and paste the following json configuration:
 
   ```
   {
@@ -127,27 +127,43 @@ customizations and configurations are listed in detail below.
 
   <img src="/images/mcp-config.png" alt="mcpconfig" width="500">
 
-- #### Click the refresh tools and select the actions from the drop-down menu.
+- To add another `MCP` tool, just click the `Tools` section and search for `MCP`. You can add an `sqlite` MCP using the json configuration below:
+
+```
+{
+  "command": "npx",
+  "args": ["-y", "mcp-sqlite-tools"],
+  "env": {
+      "SQLITE_DEFAULT_PATH": "/path/to/sqlite/database/",
+      "SQLITE_ALLOW_ABSOLUTE_PATHS": "true",
+      "SQLITE_MAX_QUERY_TIME": "30000",
+      "SQLITE_BACKUP_PATH": "/path/to/sqlite/backups/"
+  }
+}
+```
+
+- Click the refresh tools and select the actions from the drop-down menu.
 
 <img src="/images/refresh-choose-tools.png" alt="refresh" width="500">
 
-- #### As you choose the actions in the list, the tool list will be updated.
+- As you choose the actions in the list, the tool list will be updated.
 
 <img src="/images/tools-listing.png" alt="actions" width="500">
 
-- #### Finally, look for the `Messages` section and add a system prompt.
+- Finally, look for the `Messages` section and add a system prompt.
 
   <img src="/images/add-system-prompt.png" alt="prompt" width="500">
 
-- #### You can close the `Agent` customization options by clicking anywhere outside the customization box. At the upper-right corner, click the chat icon to open the chat interface as shown below. Type your query in the designated chatbox.
+- You can close the `Agent` customization options by clicking anywhere outside the customization box. At the upper-right corner, click the chat icon to open the chat interface. Type your query in the designated chatbox.
 
-  <img src="/images/chat1.png" alt="chatbutton" width="150">
-  <img src="/images/chat2.png" alt="chatinterface" width="200">
+    <img src="/images/chat1.png" alt="chatbutton" width="150">
+    <img src="/images/chat2.png" alt="chatinterface" width="200">
 
-  **_NOTE:_** One can skip the manual creation of this simple SRE agent by loading the json file called `simple-sre-agent.json` in the **agents** directory. 
-Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner. 
-Once the `Agentflow` panel is active, click the gear icon at the upper right corner and choose `Load Agents`. Clone the repo so that you have the 
-copy of the json file that you can load. Just remember to edit the `Custom MCP Parameters` of the agent with the following content:
+  **_NOTE:_** One can skip the manual creation of this simple SRE agent by loading the json file called `simple-sre-agent.json` in the **agents** directory.
+  Navigate at the left-hand menu and click `Agentflows` to open the main panel and click the `Add New` button located at the upper right corner.
+  Once the `Agentflow` panel is active, click the gear icon at the upper right corner and choose `Load Agents`. Clone the repo so that you have the
+  copy of the json file that you can load. Just remember to edit the `Custom MCP Parameters` of the agent with the following content:
+
 ```
 {
   "command": "uvx",
