@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 #####
 # https://sqlite-utils.datasette.io/en/stable/installation.html
@@ -21,31 +21,29 @@
 # ./database/Scenario-102/default.db
 
 sqlite_process() {
-  dbdir="$1"
-  scenario="$2"
-  fpath="./$dbdir/$scenario"
-  mkdir -p $fpath
-  dbname=default.db
-  echo $fpath
-  for fullpath in ./ITBench-Snapshots/**/$scenario/**/*.tsv; do
-    tablename=$(basename $fullpath .tsv)
-    fname=$(basename $fullpath)
-    echo $fullpath $tablename $fname
-    sqlite-utils insert --tsv "${fpath}/${dbname}" $tablename $fullpath
-  done
+	dbdir="$1"
+	scenario="$2"
+	fpath="./$dbdir/$scenario"
+	mkdir -p $fpath
+	dbname=default.db
+	echo $fpath
+	for fullpath in ./ITBench-Snapshots/**/$scenario/**/*.tsv; do
+		tablename=$(basename $fullpath .tsv)
+		fname=$(basename $fullpath)
+		echo $fullpath $tablename $fname
+		sqlite-utils insert --tsv "${fpath}/${dbname}" $tablename $fullpath
+	done
 }
 
-if [[ "$#" -eq 1 ]]
-then
-  for scpath in ./ITBench-Snapshots/**/Scenario-*
-  do
-    scenario=$(basename $scpath)
-    sqlite_process $1 $scenario
-  done
+if [[ "$#" -eq 1 ]]; then
+	for scpath in ./ITBench-Snapshots/**/Scenario-*; do
+		scenario=$(basename $scpath)
+		sqlite_process $1 $scenario
+	done
 else
-  echo "This function assumes that you have cloned the tsv repo."
-  echo "You should run this just one directory level above the cloned tsv repo."
-  echo "Syntax: ./tsv-to-sqlite.zsh database_location"
-  echo "Sample Usage: ./tsv-to-sqlite.zsh ./database/"
-  exit 1
+	echo "This function assumes that you have cloned the tsv repo."
+	echo "You should run this just one directory level above the cloned tsv repo."
+	echo "Syntax: ./tsv-to-sqlite.zsh database_location"
+	echo "Sample Usage: ./tsv-to-sqlite.zsh ./database/"
+	exit 1
 fi
